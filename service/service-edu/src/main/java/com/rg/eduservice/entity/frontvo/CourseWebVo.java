@@ -66,4 +66,10 @@ public class CourseWebVo implements Serializable {
     @ApiModelProperty(value = "二级类别名称")
     private String subjectLevelTwo;
 
+    @ApiModelProperty(value = "是否购买")
+    private Boolean isBuy;
+
+    @ApiModelProperty(value = "是否收藏")
+    private Boolean isCollect;
+
 }

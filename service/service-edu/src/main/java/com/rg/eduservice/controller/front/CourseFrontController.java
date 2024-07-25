@@ -10,6 +10,7 @@ import com.rg.eduservice.entity.chapter.ChapterVo;
 import com.rg.eduservice.entity.frontvo.CourseQueryVo;
 import com.rg.eduservice.entity.frontvo.CourseWebVo;
 import com.rg.eduservice.service.EduChapterService;
+import com.rg.eduservice.service.EduCourseCollectService;
 import com.rg.eduservice.service.EduCourseService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,9 @@ public class CourseFrontController {
     @Autowired
     private OrderClient orderClient;
 
+    @Autowired
+    private EduCourseCollectService courseCollectService;
+
     //1.条件查询带分页查询课程
     @PostMapping("getFrontCourseList/{page}/{limit}")
     public R getFrontCourseList(@PathVariable long page, @PathVariable long limit,
@@ -60,7 +64,11 @@ public class CourseFrontController {
 
         //根据课程id和用户id查询当前课程是否已经支付过了
         boolean buyCourse = orderClient.isBuyCourse(courseId, JwtUtils.getMemberIdByJwtToken(request));
-        return R.ok().data("course",courseWebVo).data("chapterVideoList",chapterVideoList).data("isBuy",buyCourse);
+        // TODO 根据判断用户当前课程是否收藏了
+        Boolean collectFlag = courseCollectService.isCollect(courseId,JwtUtils.getMemberIdByJwtToken(request));
+        courseWebVo.setIsBuy(buyCourse);
+        courseWebVo.setIsCollect(collectFlag);
+        return R.ok().data("course",courseWebVo).data("chapterVideoList",chapterVideoList);
     }
 
     //根据课程查询课程基本信息
@@ -70,5 +78,18 @@ public class CourseFrontController {
         CourseWebOrder courseWebOrder = new CourseWebOrder();
         BeanUtils.copyProperties(course,courseWebOrder);
         return courseWebOrder;
+    }
+
+    /**
+     * 收藏/取消收藏 课程
+     * @param request
+     * @param courseId
+     * @return
+     */
+    @PostMapping("collectCourse/{courseId}")
+    public R collectCourse(HttpServletRequest request,@PathVariable("courseId") String courseId){
+        String memberId = JwtUtils.getMemberIdByJwtToken(request);
+        courseCollectService.collectCourse(memberId,courseId);
+        return R.ok();
     }
 }
