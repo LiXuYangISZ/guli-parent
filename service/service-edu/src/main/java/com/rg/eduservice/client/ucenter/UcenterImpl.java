@@ -1,7 +1,6 @@
 package com.rg.eduservice.client.ucenter;
 
 
-import com.rg.commonutils.R;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -17,6 +16,6 @@ import java.util.Map;
 public class UcenterImpl implements UcenterClient{
     @Override
     public Map <String,Object> getMemberInfoById(String memberId) {
-        return null;
+        return new HashMap <>();
     }
 }
