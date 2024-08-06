@@ -1,12 +1,8 @@
-#mybatis-plus: #mybatis配置
-#    configuration:
-#        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#    mapper-locations: classpath:com/rg/smsservice/mapper/xml/*.xml
 server: #服务端口
     port: 8005
 spring:
     application: #服务名称
-        name: service-msm
+        name: service-sms
     jackson: #Json格式
         date-format: yyyy-MM-dd HH:mm:ss
         time-zone: GMT+8
