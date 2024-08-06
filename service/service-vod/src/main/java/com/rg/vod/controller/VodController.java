@@ -23,7 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/vodService/video")
-@CrossOrigin
+
 public class VodController {
 
     @Autowired

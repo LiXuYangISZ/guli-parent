@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @RequestMapping("/smsservice/sms")
-@CrossOrigin
+
 public class SmsApiController {
 
 

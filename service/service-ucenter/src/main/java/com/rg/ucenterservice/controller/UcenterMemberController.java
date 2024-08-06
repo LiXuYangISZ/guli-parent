@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/ucenterservice/member")
-@CrossOrigin
+
 public class UcenterMemberController {
 
     @Autowired

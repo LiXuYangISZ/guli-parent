@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 @Api("课程收藏")
 @RestController
 @RequestMapping("/eduservice/educoursecollect")
-@CrossOrigin
+
 public class EduCourseCollectController {
 
 

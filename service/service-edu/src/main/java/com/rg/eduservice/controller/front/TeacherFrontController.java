@@ -20,7 +20,7 @@ import java.util.Map;
  * @date 2022/3/12 10:40
  */
 @RestController
-@CrossOrigin
+
 @RequestMapping("/eduservice/teacherfront")
 public class TeacherFrontController {
 

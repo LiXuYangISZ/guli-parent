@@ -21,7 +21,7 @@ import java.util.List;
  * @Description 前端查询课程讲师接口
  * @date 2022/3/2 14:39
  */
-@CrossOrigin
+
 @RestController
 @RequestMapping("/eduservice/index")
 public class IndexFrontController {

@@ -24,7 +24,7 @@ import java.util.Map;
  * @Description
  * @date 2022/3/10 22:22
  */
-@CrossOrigin
+
 @Controller
 @RequestMapping("/api/ucenter/wx")
 public class WxApiController {

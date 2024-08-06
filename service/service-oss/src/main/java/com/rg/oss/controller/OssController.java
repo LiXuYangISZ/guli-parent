@@ -21,7 +21,7 @@ import javax.xml.crypto.Data;
  * @date 2022/2/19 18:45
  */
 @Api(description="阿里云文件管理")
-@CrossOrigin //跨域
+ //跨域
 @RestController
 @RequestMapping("/ossService/file")
 public class OssController {

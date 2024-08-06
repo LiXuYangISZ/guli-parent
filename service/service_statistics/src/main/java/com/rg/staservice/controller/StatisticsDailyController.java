@@ -23,7 +23,7 @@ import java.util.Objects;
  */
 @RestController
 @RequestMapping("/staservice/daily")
-@CrossOrigin
+
 @Api(description = "日常统计")
 public class StatisticsDailyController {
 

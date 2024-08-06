@@ -23,7 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/cmsservice/bannerfront")
-@CrossOrigin
+
 public class CrmBannerFrontController {
 
 

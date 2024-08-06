@@ -30,7 +30,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/eduservice/teacher")
 @Slf4j
-@CrossOrigin
 public class EduTeacherController {
 
     @Autowired
