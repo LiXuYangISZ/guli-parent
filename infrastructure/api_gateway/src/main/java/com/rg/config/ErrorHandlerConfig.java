@@ -38,7 +38,7 @@ public class ErrorHandlerConfig {
 
     public ErrorHandlerConfig(ServerProperties serverProperties,
                               ResourceProperties resourceProperties,
-                              ObjectProvider<List<ViewResolver>> viewResolversProvider,
+                              ObjectProvider <List<ViewResolver>> viewResolversProvider,
                               ServerCodecConfigurer serverCodecConfigurer,
                               ApplicationContext applicationContext) {
         this.serverProperties = serverProperties;
