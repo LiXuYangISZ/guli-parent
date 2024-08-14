@@ -50,6 +50,10 @@ spring:
             uri: lb://service-statistics
             predicates:
               - Path=/staservice/**
+          - id: service-acl
+            uri: lb://service-acl
+            predicates:
+              - Path=/admin/acl/**
           # 例子
 #          - id: service-xxx
 #            uri: lb://service-xxx
