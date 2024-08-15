@@ -53,7 +53,7 @@ spring:
           - id: service-acl
             uri: lb://service-acl
             predicates:
-              - Path=/admin/acl/**
+              - Path=/*/acl/**
           # 例子
 #          - id: service-xxx
 #            uri: lb://service-xxx
