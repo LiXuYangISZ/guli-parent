@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * <p>
- * 评论 前端控制器
+ * 评论Controller[实际上应该放在front路径下的]
  * </p>
  *
  * @author lxy
@@ -28,7 +28,7 @@ public class EduCommentController {
     private EduCommentService commentService;
 
     @Autowired
-    private UcenterClient ucenter;
+    private UcenterClient ucenterClient;
 
     //根据课程id分页查询课程评论
     @GetMapping("getCommentPage/{page}/{limit}/{courseId}")

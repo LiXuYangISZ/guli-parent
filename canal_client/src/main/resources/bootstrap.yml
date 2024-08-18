@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: canal-client
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.174.128:8848
+        group: DEFAULT_GROUP # 配置分组
+        file-extension: yml # 配置后缀
+        #  namespace:  命名空间
